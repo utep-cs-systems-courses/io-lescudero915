@@ -35,7 +35,9 @@ void switch_interrupt_handler()
     } else if (!(p2val & SW2)) {
         set_state(BLINKING);                          // Turn on LED_GREEN when SW2 is pressed
     } else if (!(p2val & SW3)) {
-        set_state(JINGLE);                          // Turn on LED_GREEN when SW2 is pressed
+        set_state(JINGLE);
+    } else if (!(p2val & SW4)) {
+        set_state(MIXED);                         
     } 
 
 }
